@@ -56,7 +56,7 @@ The committed demo data lives in `server/db/seed-data`. At runtime the files are
 
 ## Deploying to Vercel
 
-The Express API is exposed as a Vercel serverless function through `api/[...path].js`, and the Vite client is built to `dist`. There are no native dependencies, so the build no longer compiles anything against the Node runtime.
+The Express API is exposed as a Vercel serverless function through `api/index.js`, and the Vite client is built to `dist`. `vercel.json` rewrites every `/api/*` request to that function because Vercel's `api/[...path].js` catch-all only matches one path segment. There are no native dependencies, so the build no longer compiles anything against the Node runtime.
 
 1. Import the repository in Vercel and keep the framework preset as **Other** (the included `vercel.json` sets the build command and output directory).
 2. Deploy from `main`.
