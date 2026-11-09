@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import database from "../db/database.js";
+import { getBusinessById } from "../db/repositories.js";
 
 const secret = process.env.JWT_SECRET || "local-link-development-secret";
 
@@ -19,11 +19,7 @@ export function requireAuth(request, response, next) {
   try {
     const token = request.cookies.local_link_token;
     const payload = jwt.verify(token, secret);
-    const business = database
-      .prepare(
-        "SELECT id, business_name, legal_name, trade_name, gstin, owner_name, email, phone, state, account_status, role FROM businesses WHERE id = ?",
-      )
-      .get(payload.id);
+    const business = getBusinessById(payload.id);
     if (!business)
       return response
         .status(401)

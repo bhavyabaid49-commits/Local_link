@@ -1,0 +1,80 @@
+[
+  {
+    "id": 122,
+    "product_id": 891,
+    "supplier_id": 43,
+    "minimum_units": 300,
+    "deadline": "2026-11-14T15:00:04.773Z",
+    "status": "Open",
+    "final_price": null,
+    "created_at": "2026-11-09 15:00:04",
+    "pack_size": 100,
+    "min_order_total": 300,
+    "base_price": 10
+  },
+  {
+    "id": 123,
+    "product_id": 892,
+    "supplier_id": 43,
+    "minimum_units": 300,
+    "deadline": "2026-11-11T15:00:04.774Z",
+    "status": "Open",
+    "final_price": null,
+    "created_at": "2026-11-09 15:00:04",
+    "pack_size": 100,
+    "min_order_total": 300,
+    "base_price": 12
+  },
+  {
+    "id": 124,
+    "product_id": 893,
+    "supplier_id": 44,
+    "minimum_units": 20,
+    "deadline": "2026-11-17T15:00:04.775Z",
+    "status": "Open",
+    "final_price": null,
+    "created_at": "2026-11-09 15:00:04",
+    "pack_size": 1,
+    "min_order_total": 20,
+    "base_price": 2100
+  },
+  {
+    "id": 125,
+    "product_id": 894,
+    "supplier_id": 44,
+    "minimum_units": 20,
+    "deadline": "2026-11-10T15:00:04.775Z",
+    "status": "Open",
+    "final_price": null,
+    "created_at": "2026-11-09 15:00:04",
+    "pack_size": 1,
+    "min_order_total": 20,
+    "base_price": 1450
+  },
+  {
+    "id": 126,
+    "product_id": 895,
+    "supplier_id": 43,
+    "minimum_units": 300,
+    "deadline": "2026-11-08T15:00:04.775Z",
+    "status": "Closed",
+    "final_price": 6.8,
+    "created_at": "2026-11-09 15:00:04",
+    "pack_size": 100,
+    "min_order_total": 300,
+    "base_price": 8
+  },
+  {
+    "id": 127,
+    "product_id": 891,
+    "supplier_id": 43,
+    "minimum_units": 300,
+    "deadline": "2026-11-01T15:00:04.775Z",
+    "status": "Closed",
+    "final_price": 8.5,
+    "created_at": "2026-11-09 15:00:04",
+    "pack_size": 100,
+    "min_order_total": 300,
+    "base_price": 10
+  }
+]

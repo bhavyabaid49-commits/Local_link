@@ -1,7 +1,15 @@
 import bcrypt from "bcryptjs";
 import express from "express";
 import rateLimit from "express-rate-limit";
-import database from "../db/database.js";
+import {
+  createBusiness,
+  createOtp,
+  findValidOtp,
+  getBusinessByEmail,
+  getBusinessById,
+  markOtpUsed,
+  updateBusiness,
+} from "../db/repositories.js";
 import { setAuthCookie } from "../middleware/auth.js";
 import { requiredFields } from "../middleware/validation.js";
 import { isValidGstin, normalizeGstin } from "../services/gstin.js";
@@ -55,46 +63,36 @@ router.post("/register", async (request, response) => {
       .json({ error: "This GST registration is not active." });
   try {
     const hash = await bcrypt.hash(request.body.password, 10);
-    const result = database
-      .prepare(
-        "INSERT INTO businesses (business_name, legal_name, trade_name, gstin, owner_name, email, phone, password_hash, state, gst_status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-      )
-      .run(
-        request.body.businessName.trim(),
-        gst.legalName,
-        gst.tradeName,
-        gstin,
-        request.body.ownerName.trim(),
-        request.body.email.trim().toLowerCase(),
-        request.body.phone.trim(),
-        hash,
-        gst.state,
-        gst.status,
-      );
+    const business = createBusiness({
+      business_name: request.body.businessName.trim(),
+      legal_name: gst.legalName,
+      trade_name: gst.tradeName,
+      gstin,
+      owner_name: request.body.ownerName.trim(),
+      email: request.body.email.trim().toLowerCase(),
+      phone: request.body.phone.trim(),
+      password_hash: hash,
+      state: gst.state,
+      gst_status: gst.status,
+    });
     const code = String(Math.floor(100000 + Math.random() * 900000));
-    database
-      .prepare(
-        "INSERT INTO otp_codes (business_id, code, expires_at) VALUES (?, ?, ?)",
-      )
-      .run(
-        result.lastInsertRowid,
-        code,
-        new Date(Date.now() + 10 * 60 * 1000).toISOString(),
-      );
+    createOtp({
+      businessId: business.id,
+      code,
+      expiresAt: new Date(Date.now() + 10 * 60 * 1000).toISOString(),
+    });
     console.log(
       `[demo OTP] ${request.body.email.trim().toLowerCase()}: ${code}`,
     );
-    response
-      .status(201)
-      .json({
-        businessId: result.lastInsertRowid,
-        legalName: gst.legalName,
-        tradeName: gst.tradeName,
-        state: gst.state,
-        message: "GST verified. Enter the OTP sent to your email.",
-      });
+    response.status(201).json({
+      businessId: business.id,
+      legalName: gst.legalName,
+      tradeName: gst.tradeName,
+      state: gst.state,
+      message: "GST verified. Enter the OTP sent to your email.",
+    });
   } catch (error) {
-    if (error.code === "SQLITE_CONSTRAINT_UNIQUE")
+    if (error.code === "DUPLICATE")
       return response
         .status(409)
         .json({ error: "That email or GSTIN is already registered." });
@@ -104,22 +102,18 @@ router.post("/register", async (request, response) => {
 
 router.post("/verify-otp", otpLimiter, (request, response) => {
   const { businessId, otp } = request.body;
-  const record = database
-    .prepare(
-      "SELECT * FROM otp_codes WHERE business_id = ? AND code = ? AND used = 0 AND expires_at > ? ORDER BY id DESC LIMIT 1",
-    )
-    .get(businessId, String(otp || ""), new Date().toISOString());
+  const record = findValidOtp({
+    businessId,
+    code: String(otp || ""),
+    currentTime: new Date().toISOString(),
+  });
   if (!record)
     return response
       .status(400)
       .json({ error: "That OTP is invalid or expired." });
-  database.prepare("UPDATE otp_codes SET used = 1 WHERE id = ?").run(record.id);
-  database
-    .prepare("UPDATE businesses SET account_status = 'Verified' WHERE id = ?")
-    .run(businessId);
-  const business = database
-    .prepare("SELECT * FROM businesses WHERE id = ?")
-    .get(businessId);
+  markOtpUsed(record.id);
+  updateBusiness(businessId, { account_status: "Verified" });
+  const business = getBusinessById(businessId);
   setAuthCookie(response, business);
   response.json({
     business: {
@@ -135,9 +129,7 @@ router.post("/login", loginLimiter, async (request, response) => {
   const email = String(request.body.email || "")
     .trim()
     .toLowerCase();
-  const business = database
-    .prepare("SELECT * FROM businesses WHERE email = ?")
-    .get(email);
+  const business = getBusinessByEmail(email);
   if (
     !business ||
     !(await bcrypt.compare(

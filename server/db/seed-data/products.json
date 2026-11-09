@@ -1,0 +1,620 @@
+[
+  {
+    "id": 891,
+    "name": "500ml PET containers",
+    "category": "Takeaway & packaging",
+    "unit_label": "pack of 100"
+  },
+  {
+    "id": 892,
+    "name": "Kraft paper delivery bags",
+    "category": "Takeaway & packaging",
+    "unit_label": "bundle of 100"
+  },
+  {
+    "id": 893,
+    "name": "Sunflower oil (15 kg tin)",
+    "category": "Groceries & raw materials",
+    "unit_label": "tin"
+  },
+  {
+    "id": 894,
+    "name": "Sona masoori rice (25 kg)",
+    "category": "Groceries & raw materials",
+    "unit_label": "bag"
+  },
+  {
+    "id": 895,
+    "name": "Tissue napkins",
+    "category": "Tableware & serving",
+    "unit_label": "carton of 1,000"
+  },
+  {
+    "id": 896,
+    "name": "Gas stove (2 burner)",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 897,
+    "name": "Commercial gas stove",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 898,
+    "name": "Pressure cooker",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 899,
+    "name": "Kadai",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 900,
+    "name": "Frying pan",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 901,
+    "name": "Saucepan",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 902,
+    "name": "Cooking pot",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 903,
+    "name": "Chef knife",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 904,
+    "name": "Vegetable knife",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 905,
+    "name": "Chopping board",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 906,
+    "name": "Ladle",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 907,
+    "name": "Spatula",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 908,
+    "name": "Strainer",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 909,
+    "name": "Mixing bowl",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 910,
+    "name": "Digital weighing scale",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 911,
+    "name": "Mixer grinder",
+    "category": "Kitchen equipment",
+    "unit_label": "piece"
+  },
+  {
+    "id": 912,
+    "name": "Rice",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 913,
+    "name": "Wheat flour (atta)",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 914,
+    "name": "Maida",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 915,
+    "name": "Rava",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 916,
+    "name": "Toor dal",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 917,
+    "name": "Chana dal",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 918,
+    "name": "Cooking oil",
+    "category": "Groceries & raw materials",
+    "unit_label": "litre"
+  },
+  {
+    "id": 919,
+    "name": "Ghee",
+    "category": "Groceries & raw materials",
+    "unit_label": "litre"
+  },
+  {
+    "id": 920,
+    "name": "Sugar",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 921,
+    "name": "Salt",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 922,
+    "name": "Turmeric powder",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 923,
+    "name": "Chilli powder",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 924,
+    "name": "Coriander powder",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 925,
+    "name": "Garam masala",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 926,
+    "name": "Cumin seeds",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 927,
+    "name": "Onion",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 928,
+    "name": "Tomato",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 929,
+    "name": "Potato",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 930,
+    "name": "Ginger",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 931,
+    "name": "Garlic",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 932,
+    "name": "Green chilli",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 933,
+    "name": "Milk",
+    "category": "Groceries & raw materials",
+    "unit_label": "litre"
+  },
+  {
+    "id": 934,
+    "name": "Curd",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 935,
+    "name": "Paneer",
+    "category": "Groceries & raw materials",
+    "unit_label": "kg"
+  },
+  {
+    "id": 936,
+    "name": "Eggs",
+    "category": "Groceries & raw materials",
+    "unit_label": "piece"
+  },
+  {
+    "id": 937,
+    "name": "Stainless steel dinner plate",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 938,
+    "name": "Stainless steel bowl",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 939,
+    "name": "Stainless steel tumbler",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 940,
+    "name": "Water glass",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 941,
+    "name": "Tea cup",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 942,
+    "name": "Coffee cup",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 943,
+    "name": "Dinner spoon",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 944,
+    "name": "Fork",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 945,
+    "name": "Table knife",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 946,
+    "name": "Serving spoon",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 947,
+    "name": "Serving tray",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 948,
+    "name": "Water jug",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 949,
+    "name": "Tissue paper",
+    "category": "Tableware & serving",
+    "unit_label": "pack"
+  },
+  {
+    "id": 950,
+    "name": "Toothpicks",
+    "category": "Tableware & serving",
+    "unit_label": "pack"
+  },
+  {
+    "id": 951,
+    "name": "Sauce bottle",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 952,
+    "name": "Napkin holder",
+    "category": "Tableware & serving",
+    "unit_label": "piece"
+  },
+  {
+    "id": 953,
+    "name": "Dishwashing liquid",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "litre"
+  },
+  {
+    "id": 954,
+    "name": "Floor cleaner",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "litre"
+  },
+  {
+    "id": 955,
+    "name": "Toilet cleaner",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "litre"
+  },
+  {
+    "id": 956,
+    "name": "Handwash liquid",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "litre"
+  },
+  {
+    "id": 957,
+    "name": "Surface disinfectant",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "litre"
+  },
+  {
+    "id": 958,
+    "name": "Glass cleaner",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "500 ml"
+  },
+  {
+    "id": 959,
+    "name": "Broom",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "piece"
+  },
+  {
+    "id": 960,
+    "name": "Mop",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "piece"
+  },
+  {
+    "id": 961,
+    "name": "Bucket",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "piece"
+  },
+  {
+    "id": 962,
+    "name": "Dustpan",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "piece"
+  },
+  {
+    "id": 963,
+    "name": "Scrub pad",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "piece"
+  },
+  {
+    "id": 964,
+    "name": "Cleaning cloth",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "piece"
+  },
+  {
+    "id": 965,
+    "name": "Garbage bags",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "roll"
+  },
+  {
+    "id": 966,
+    "name": "Cleaning gloves",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "pair"
+  },
+  {
+    "id": 967,
+    "name": "Toilet brush",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "piece"
+  },
+  {
+    "id": 968,
+    "name": "Sponge",
+    "category": "Cleaning & housekeeping",
+    "unit_label": "piece"
+  },
+  {
+    "id": 969,
+    "name": "Food parcel container",
+    "category": "Takeaway & packaging",
+    "unit_label": "piece"
+  },
+  {
+    "id": 970,
+    "name": "Aluminium foil container",
+    "category": "Takeaway & packaging",
+    "unit_label": "piece"
+  },
+  {
+    "id": 971,
+    "name": "Paper cup",
+    "category": "Takeaway & packaging",
+    "unit_label": "piece"
+  },
+  {
+    "id": 972,
+    "name": "Disposable spoon",
+    "category": "Takeaway & packaging",
+    "unit_label": "piece"
+  },
+  {
+    "id": 973,
+    "name": "Paper carry bag",
+    "category": "Takeaway & packaging",
+    "unit_label": "piece"
+  },
+  {
+    "id": 974,
+    "name": "Parcel bag",
+    "category": "Takeaway & packaging",
+    "unit_label": "piece"
+  },
+  {
+    "id": 975,
+    "name": "Aluminium foil roll",
+    "category": "Takeaway & packaging",
+    "unit_label": "roll"
+  },
+  {
+    "id": 976,
+    "name": "Cling film roll",
+    "category": "Takeaway & packaging",
+    "unit_label": "roll"
+  },
+  {
+    "id": 977,
+    "name": "Tissue packet",
+    "category": "Takeaway & packaging",
+    "unit_label": "pack"
+  },
+  {
+    "id": 978,
+    "name": "Food packing tape",
+    "category": "Takeaway & packaging",
+    "unit_label": "roll"
+  },
+  {
+    "id": 979,
+    "name": "Airtight container",
+    "category": "Storage & food safety",
+    "unit_label": "piece"
+  },
+  {
+    "id": 980,
+    "name": "Food storage box",
+    "category": "Storage & food safety",
+    "unit_label": "piece"
+  },
+  {
+    "id": 981,
+    "name": "Ingredient storage bin",
+    "category": "Storage & food safety",
+    "unit_label": "piece"
+  },
+  {
+    "id": 982,
+    "name": "Food-grade gloves",
+    "category": "Storage & food safety",
+    "unit_label": "box"
+  },
+  {
+    "id": 983,
+    "name": "Hairnets",
+    "category": "Storage & food safety",
+    "unit_label": "pack"
+  },
+  {
+    "id": 984,
+    "name": "Chef cap",
+    "category": "Storage & food safety",
+    "unit_label": "piece"
+  },
+  {
+    "id": 985,
+    "name": "Apron",
+    "category": "Storage & food safety",
+    "unit_label": "piece"
+  },
+  {
+    "id": 986,
+    "name": "Digital thermometer",
+    "category": "Storage & food safety",
+    "unit_label": "piece"
+  },
+  {
+    "id": 987,
+    "name": "Food labels",
+    "category": "Storage & food safety",
+    "unit_label": "roll"
+  },
+  {
+    "id": 988,
+    "name": "First-aid kit",
+    "category": "Storage & food safety",
+    "unit_label": "kit"
+  },
+  {
+    "id": 989,
+    "name": "Thermal paper roll",
+    "category": "Office & billing",
+    "unit_label": "roll"
+  },
+  {
+    "id": 990,
+    "name": "Order book",
+    "category": "Office & billing",
+    "unit_label": "book"
+  },
+  {
+    "id": 991,
+    "name": "Pen",
+    "category": "Office & billing",
+    "unit_label": "piece"
+  },
+  {
+    "id": 992,
+    "name": "Marker",
+    "category": "Office & billing",
+    "unit_label": "piece"
+  },
+  {
+    "id": 993,
+    "name": "Calculator",
+    "category": "Office & billing",
+    "unit_label": "piece"
+  }
+]

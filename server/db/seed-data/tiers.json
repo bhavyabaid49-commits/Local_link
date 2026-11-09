@@ -1,0 +1,110 @@
+[
+  {
+    "id": 364,
+    "group_order_id": 122,
+    "threshold_units": 300,
+    "unit_price": 9.5
+  },
+  {
+    "id": 365,
+    "group_order_id": 122,
+    "threshold_units": 500,
+    "unit_price": 9
+  },
+  {
+    "id": 366,
+    "group_order_id": 122,
+    "threshold_units": 1000,
+    "unit_price": 8.5
+  },
+  {
+    "id": 367,
+    "group_order_id": 123,
+    "threshold_units": 300,
+    "unit_price": 11.4
+  },
+  {
+    "id": 368,
+    "group_order_id": 123,
+    "threshold_units": 500,
+    "unit_price": 10.8
+  },
+  {
+    "id": 369,
+    "group_order_id": 123,
+    "threshold_units": 1000,
+    "unit_price": 10.2
+  },
+  {
+    "id": 370,
+    "group_order_id": 124,
+    "threshold_units": 20,
+    "unit_price": 2040
+  },
+  {
+    "id": 371,
+    "group_order_id": 124,
+    "threshold_units": 40,
+    "unit_price": 1932
+  },
+  {
+    "id": 372,
+    "group_order_id": 124,
+    "threshold_units": 60,
+    "unit_price": 1785
+  },
+  {
+    "id": 373,
+    "group_order_id": 125,
+    "threshold_units": 20,
+    "unit_price": 1406.5
+  },
+  {
+    "id": 374,
+    "group_order_id": 125,
+    "threshold_units": 30,
+    "unit_price": 1334
+  },
+  {
+    "id": 375,
+    "group_order_id": 125,
+    "threshold_units": 60,
+    "unit_price": 1232.5
+  },
+  {
+    "id": 376,
+    "group_order_id": 126,
+    "threshold_units": 300,
+    "unit_price": 7.6
+  },
+  {
+    "id": 377,
+    "group_order_id": 126,
+    "threshold_units": 500,
+    "unit_price": 7.2
+  },
+  {
+    "id": 378,
+    "group_order_id": 126,
+    "threshold_units": 1000,
+    "unit_price": 6.8
+  },
+  {
+    "id": 379,
+    "group_order_id": 127,
+    "threshold_units": 300,
+    "unit_price": 9.5
+  },
+  {
+    "id": 380,
+    "group_order_id": 127,
+    "threshold_units": 500,
+    "unit_price": 9
+  },
+  {
+    "id": 381,
+    "group_order_id": 127,
+    "threshold_units": 1000,
+    "unit_price": 8.5
+  }
+]

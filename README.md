@@ -15,7 +15,7 @@ npm run dev
 
 Open `http://127.0.0.1:5173`.
 
-`npm run dev` starts the Vite client and Express API together. The SQLite database is created at `server/data/local-link.db`.
+`npm run dev` starts the Vite client and Express API together. Data is stored as one JSON file per model in `server/data`.
 
 ## Demo accounts
 
@@ -27,24 +27,44 @@ When registering a new business, the email OTP is printed in the server console.
 ## Project layout
 
 - `client`: React, Vite, routes, pages, API client, and plain CSS
-- `server/db`: SQLite schema and seed script
+- `server/db`: JSON store, repositories, and the seed data for each model
 - `server/routes`: auth, order, admin, and chatbot APIs
 - `server/services`: GSTIN validation and the mock GST provider
 - `server/middleware`: JWT authentication and request helpers
 
 Change the placeholder product name in `client/src/config.js`. The API key for the optional chatbot provider belongs only in `.env`; it is never sent to the browser. Without a key, the keyword FAQ fallback handles basic platform questions.
 
+## Data storage
+
+There is no external database. Every model is persisted as a JSON array:
+
+| File | Model |
+|---|---|
+| `businesses.json` | Registered businesses and admins |
+| `otp_codes.json` | Email verification codes |
+| `suppliers.json` | Wholesale suppliers |
+| `products.json` | Product catalog |
+| `group_orders.json` | Group order headers |
+| `tiers.json` | Group order price tiers |
+| `participants.json` | Business commitments to group orders |
+| `supply_requests.json` | Supply requests |
+| `supplier_interests.json` | Supplier offers on requests |
+| `sell_listings.json` | Seller marketplace listings |
+| `sell_orders.json` | Marketplace purchases |
+
+The committed demo data lives in `server/db/seed-data`. At runtime the files are copied to `server/data` (or `DATA_DIR`) and read/written through `server/db/store.js`; queries and joins are implemented in `server/db/repositories.js`. `npm run seed` restores the demo data.
+
 ## Deploying to Vercel
 
-The Express API is exposed as a Vercel serverless function through `api/[...path].js`, and the Vite client is built to `dist`. Node is pinned to `22.x` in `package.json` because `better-sqlite3` does not yet ship binaries for newer Node versions.
+The Express API is exposed as a Vercel serverless function through `api/[...path].js`, and the Vite client is built to `dist`. There are no native dependencies, so the build no longer compiles anything against the Node runtime.
 
 1. Import the repository in Vercel and keep the framework preset as **Other** (the included `vercel.json` sets the build command and output directory).
 2. Deploy from `main`.
 3. The API is available at `/api/*` on the same domain, and the client calls it with a relative URL in production.
 
-On Vercel the SQLite file is created in `/tmp/local-link` and seeded on the first cold start. `/tmp` is ephemeral, so deployed data resets when the function instance is recycled. For durable data, point `DATA_DIR` at a persistent volume or replace SQLite with a hosted database (for example Turso or Postgres).
+On Vercel the JSON files are written to `/tmp/local-link` and seeded from `server/db/seed-data` on the first cold start. `/tmp` is ephemeral, so deployed data resets when the function instance is recycled. For durable data, point `DATA_DIR` at a persistent volume or replace the store with a hosted database.
 
-Locally the database remains at `server/data/local-link.db`. Set `DATA_DIR` to override the location.
+Locally the JSON files live in `server/data`. Set `DATA_DIR` to override the location.
 
 ## Seller listing pricing
 
