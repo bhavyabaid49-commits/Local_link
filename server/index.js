@@ -29,12 +29,19 @@ app.use("/api/chat", chatRoutes);
 app.use("/api/requests", requestRoutes);
 app.use("/api/sell-listings", sellListingRoutes);
 app.use("/api/products", productRoutes);
-setInterval(closeExpiredOrders, 60 * 1000);
+
+if (!process.env.VERCEL) {
+  setInterval(closeExpiredOrders, 60 * 1000);
+}
 
 app.get("/api/health", (_request, response) => {
   response.json({ ok: true, service: "Local Link API" });
 });
 
-app.listen(port, () => {
-  console.log(`Local Link API listening on http://127.0.0.1:${port}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`Local Link API listening on http://127.0.0.1:${port}`);
+  });
+}
+
+export default app;

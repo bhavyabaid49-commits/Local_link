@@ -1,4 +1,4 @@
-const apiBase = "http://127.0.0.1:4000/api";
+const apiBase = import.meta.env.DEV ? "http://127.0.0.1:4000/api" : "/api";
 
 export async function apiRequest(path, options = {}) {
   const response = await fetch(`${apiBase}${path}`, {

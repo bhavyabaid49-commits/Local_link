@@ -4,7 +4,7 @@ Local Link is a local full-stack demo for group buying by GST-verified restauran
 
 ## Run locally
 
-Requirements: Node.js 18 or newer.
+Requirements: Node.js 22 or newer.
 
 ```bash
 cp .env.example .env
@@ -33,6 +33,18 @@ When registering a new business, the email OTP is printed in the server console.
 - `server/middleware`: JWT authentication and request helpers
 
 Change the placeholder product name in `client/src/config.js`. The API key for the optional chatbot provider belongs only in `.env`; it is never sent to the browser. Without a key, the keyword FAQ fallback handles basic platform questions.
+
+## Deploying to Vercel
+
+The Express API is exposed as a Vercel serverless function through `api/[...path].js`, and the Vite client is built to `dist`. Node is pinned to `22.x` in `package.json` because `better-sqlite3` does not yet ship binaries for newer Node versions.
+
+1. Import the repository in Vercel and keep the framework preset as **Other** (the included `vercel.json` sets the build command and output directory).
+2. Deploy from `main`.
+3. The API is available at `/api/*` on the same domain, and the client calls it with a relative URL in production.
+
+On Vercel the SQLite file is created in `/tmp/local-link` and seeded on the first cold start. `/tmp` is ephemeral, so deployed data resets when the function instance is recycled. For durable data, point `DATA_DIR` at a persistent volume or replace SQLite with a hosted database (for example Turso or Postgres).
+
+Locally the database remains at `server/data/local-link.db`. Set `DATA_DIR` to override the location.
 
 ## Seller listing pricing
 

@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import Database from "better-sqlite3";
 
-const dataDirectory = path.resolve("server/data");
+const dataDirectory = process.env.DATA_DIR
+  || (process.env.VERCEL ? "/tmp/local-link" : path.resolve("server/data"));
 fs.mkdirSync(dataDirectory, { recursive: true });
 
 const database = new Database(path.join(dataDirectory, "local-link.db"));
